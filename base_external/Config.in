@@ -1,0 +1,2 @@
+menu "Ass4 p2 Buildroot"
+source "$BR2_EXTERNAL_project_base_PATH/package/eaesd-assignments/Config.in"
