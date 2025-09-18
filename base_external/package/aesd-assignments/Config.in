@@ -1,7 +1,7 @@
 
 config BR2_PACKAGE_AESD_ASSIGNMENTS
-	bool "aesd-assignment_4-p2"
+	bool "aesd-assignment_5-p2"
 	help
-	  Includes the writer executable, finder.sh and tester.sh in the kernel image.
+	  Includes the server in the kernel image.
 	  Used to understand buildroot external trees and package builds.
 	  Refers git repo assognment-3-and-later
