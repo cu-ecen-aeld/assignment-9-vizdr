@@ -1,0 +1,35 @@
+#!/bin/sh
+
+print_info() {
+    echo -e "$0: loading at init or unloading at shutdown scull, faulty and hello kernel modules.\nhandling: $0 ( start | stop )" >&2
+}
+
+if [ $# -lt 1 ]
+then
+    print_info
+    exit 1
+fi
+
+# uname -r -> linux kernel version
+LDD_MODULES_DIR=/lib/modules/$(uname -r)/ldd-modules/
+
+cd $LDD_MODULES_DIR
+
+case $1 in
+    start)
+        scull/scull_load
+        misc-modules/module_load faulty
+        modprobe hello
+        ;;
+    stop)
+        rmmod hello
+        misc-modules/module_unload faulty
+        scull/scull_unload
+        ;;
+    *)
+        print_info
+        exit 1
+        ;;
+esac
+
+exit 0

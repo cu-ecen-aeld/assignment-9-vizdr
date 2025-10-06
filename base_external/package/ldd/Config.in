@@ -1,0 +1,7 @@
+
+config BR2_PACKAGE_LDD
+	bool "ldd"
+	help
+	  Includes the server in the kernel image, misc-modules and driver from aesd ldd3.
+	  Used to understand buildroot external trees and package builds.
+	  Refers git repo assognment-3-and-later
