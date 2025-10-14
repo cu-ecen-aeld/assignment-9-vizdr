@@ -3,7 +3,7 @@
 # AESDCHAR
 #
 ##############################################################
-AESDCHAR_VERSION = 7d09009f2a8702b2d5ec4f2843959e0bd7df5e9b
+AESDCHAR_VERSION = b25071fca826e19d3f7d2b043e143f5483af7ce4
 AESDCHAR_SITE = git@github.com:cu-ecen-aeld/assignments-3-and-later-vizdr.git
 AESDCHAR_SITE_METHOD = git
 
